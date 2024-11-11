@@ -1,41 +1,24 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>新建HTML</title>
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<!-- 轮播图开始 -->
-		<div class="box" id="box">
-			<!-- 图片 -->
-			<ul class="pics" id="pics">
-				<li class="current">
-					<img src="imeges/banner1.png" alt="">
-				</li>
-				<li>
-					<img src="imeges/banner2.png" alt="">
-				</li>
-				<li>
-					<img src="imeges/banner3.png" alt="">
-				</li>
-			</ul>
-			<!-- 按钮 -->
-			<div class="btn" id="btn">
-				<a href="javascript:;" class="left-btn" id="left-btn">&lt;</a>
-				<a href="javascript:;" class="right-btn" id="right-btn">&gt;</a>
-			</div>
-			<!-- 小圆点 -->
-			<ol class="sub" id="sub">
-				<li class="current"></li>
-				<li></li>
-				<li></li>
-			</ol>
-		</div>
-		<!-- 轮播图结束 -->
-		<!-- 引入外部js轮播图代码 -->
-		<script src="js/banner.js"></script>
-	</body>
+    <head>
+        <meta charset="utf-8">
+        <title>新建HTML</title>
+    </head>
+    <script type="text/javascript">
+        window.onload = function () {
+            //onload表示页面加载完成后执行，listener就要在此之后执行
+            //alert('页面加载时展示');
+            document.getElementById("mainmenu").addEventListener("mouseover", function(event){
+                alert('鼠标移入标题');
+            });
+            document.getElementById("product").addEventListener("mouseover", function(){
+                //每当切换元素mouseover和mouseout会同时执行
+                //移入其他元素时也是移除当前元素，
+            });
+        }
+    </script>
+    <body>
+        <h1 id="mainmenu">我的标题</h1>
+        <p>我的段落。</p>
+    </body>
 </html>
